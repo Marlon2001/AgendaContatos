@@ -45,6 +45,7 @@
             android:id="@+id/layout_txt_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/HintText">
 
             <EditText
@@ -59,7 +60,7 @@
             android:id="@+id/layout_txt_endereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/HintText"
             android:layout_below="@+id/layout_txt_nome">
 
@@ -74,7 +75,7 @@
             android:id="@+id/layout_txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/HintText"
             android:layout_below="@+id/layout_txt_endereco">
 
@@ -89,7 +90,7 @@
             android:id="@+id/layout_txt_linkedin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/HintText"
             android:layout_below="@+id/layout_txt_email">
 
@@ -104,7 +105,7 @@
             android:id="@+id/layout_txt_telefone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/HintText"
             android:layout_below="@+id/layout_txt_linkedin">
 
@@ -119,7 +120,7 @@
             android:id="@+id/layout_txt_obs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/HintText"
             android:layout_below="@+id/layout_txt_telefone">
 

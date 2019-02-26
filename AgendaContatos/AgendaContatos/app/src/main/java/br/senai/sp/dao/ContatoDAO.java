@@ -85,7 +85,7 @@ public class ContatoDAO extends SQLiteOpenHelper {
         dados.put("email", contato.getEmail());
         dados.put("linkedin", contato.getLinkedin());
         dados.put("telefone", contato.getTelefone());
-        dados.put("obs", contato.getTelefone());
+        dados.put("obs", contato.getObs());
 
         return dados;
     }

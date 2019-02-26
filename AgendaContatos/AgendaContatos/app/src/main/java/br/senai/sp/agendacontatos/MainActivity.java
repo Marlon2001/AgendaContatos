@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.List;
 
 import br.senai.sp.dao.ContatoDAO;
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         List<Contato> contatos = dao.getContatos();
         dao.close();
 
-        ArrayAdapter<Contato> adapterFilmes = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
-        listaContato.setAdapter(adapterFilmes);
+        ArrayAdapter<Contato> adapterContatos = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
+        listaContato.setAdapter(adapterContatos);
     }
 }

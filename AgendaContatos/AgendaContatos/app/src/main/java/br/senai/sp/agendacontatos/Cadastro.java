@@ -1,13 +1,11 @@
 package br.senai.sp.agendacontatos;
 
 import android.content.Intent;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import br.senai.sp.dao.ContatoDAO;
@@ -20,6 +18,10 @@ public class Cadastro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //Mostrar o botão de voltar
+        getSupportActionBar().setHomeButtonEnabled(true);      //Ativar o botão
+        getSupportActionBar().setTitle("Agenda de Contatos");
 
         helper = new CadastroContatoHelper(this);
 
@@ -60,6 +62,11 @@ public class Cadastro extends AppCompatActivity {
             case R.id.btn_cancelar:
                 Toast.makeText(this, "Operação cancelada!", Toast.LENGTH_LONG).show();
                 finish();
+                break;
+            case android.R.id.home:
+                Intent intent = new Intent(Cadastro.this, MainActivity.class);
+                startActivity(intent);
+                finishAffinity();
                 break;
         }
         return super.onOptionsItemSelected(item);
