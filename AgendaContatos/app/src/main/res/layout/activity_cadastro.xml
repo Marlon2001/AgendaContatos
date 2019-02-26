@@ -10,15 +10,26 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp">
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/bt_add_foto"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_add_foto"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:text="Novo Contato"
             android:textColor="@color/colorPrimary"
             android:paddingLeft="16dp"
             android:textSize="24dp"
+            android:paddingTop="16dp"
             android:textStyle="bold"/>
     </LinearLayout>
 
@@ -41,7 +52,7 @@
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite seu nome"
+                android:hint="Nome"
                 android:paddingStart="8dp"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -57,7 +68,7 @@
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite seu endereço" />
+                android:hint="Endereço" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/layout_txt_email"
@@ -72,7 +83,7 @@
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite seu e-mail" />
+                android:hint="E-mail" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/layout_txt_linkedin"
@@ -87,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:inputType="text"
                 android:layout_height="wrap_content"
-                android:hint="Digite seu linkedin" />
+                android:hint="Linkedin" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/layout_txt_telefone"
@@ -102,7 +113,7 @@
                 android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite seu telefone" />
+                android:hint="Telefone" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/layout_txt_obs"

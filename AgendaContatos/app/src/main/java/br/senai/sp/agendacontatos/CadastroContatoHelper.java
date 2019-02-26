@@ -23,6 +23,26 @@ public class CadastroContatoHelper {
         contato = new Contato();
     }
 
+    public boolean verificaCampos(){
+        boolean semErros = true;
+        if(txtNome.getText().toString().isEmpty()){
+            semErros = false;
+        }
+        if(txtEndereco.getText().toString().isEmpty()){
+            semErros = false;
+        }
+        if(txtEmail.getText().toString().isEmpty()){
+            semErros = false;
+        }
+        if(txtTelefone.getText().toString().isEmpty()){
+            semErros = false;
+        }
+        if(txtLinkedin.getText().toString().isEmpty()){
+            semErros = false;
+        }
+        return semErros;
+    }
+
     public Contato getContato() {
         contato.setNome(txtNome.getText().toString());
         contato.setEndereco(txtEndereco.getText().toString());
@@ -31,5 +51,15 @@ public class CadastroContatoHelper {
         contato.setLinkedin(txtLinkedin.getText().toString());
         contato.setObs(txtObs.getText().toString());
         return contato;
+    }
+
+    public void preencherCampos(Contato contato){
+        txtNome.setText(contato.getNome());
+        txtEndereco.setText(contato.getEndereco());
+        txtEmail.setText(contato.getEmail());
+        txtTelefone.setText(contato.getTelefone());
+        txtLinkedin.setText(contato.getLinkedin());
+        txtObs.setText(contato.getObs());
+        this.contato = contato;
     }
 }

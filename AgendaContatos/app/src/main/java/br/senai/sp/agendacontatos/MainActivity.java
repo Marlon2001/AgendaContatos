@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.List;
 
 import br.senai.sp.dao.ContatoDAO;
@@ -40,6 +41,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(abrirCadastro);
             }
         });
+
+        listaContato.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Contato contato = (Contato) listaContato.getItemAtPosition(position);
+                Intent abrirCadastro = new Intent(MainActivity.this, Cadastro.class);
+
+                abrirCadastro.putExtra("contato", contato);
+                startActivity(abrirCadastro);
+            }
+        });
+
+        registerForContextMenu(listaContato);
     }
 
     public boolean onContextItemSelected(MenuItem item) {
@@ -48,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         final Contato contato = (Contato) listaContato.getItemAtPosition(info.position);
 
         new AlertDialog.Builder(this)
-                .setTitle("Deletar Filme")
+                .setTitle("Deletar Contato")
                 .setMessage("Tem certeza que deseja excluir o contato "+contato.getNome()+"?")
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override

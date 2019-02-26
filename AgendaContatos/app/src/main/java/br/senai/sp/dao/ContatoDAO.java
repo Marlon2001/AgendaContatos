@@ -37,13 +37,7 @@ public class ContatoDAO extends SQLiteOpenHelper {
 
     public void salvar(Contato contato){
         SQLiteDatabase db = getWritableDatabase();
-        ContentValues dados = new ContentValues();
-        dados.put("nome", contato.getNome());
-        dados.put("endereco", contato.getEndereco());
-        dados.put("email", contato.getEmail());
-        dados.put("linkedin", contato.getLinkedin());
-        dados.put("telefone", contato.getTelefone());
-        dados.put("obs", contato.getTelefone());
+        ContentValues dados = getDados(contato);
 
         db.insert("tbl_contato", null, dados);
     }
@@ -75,4 +69,29 @@ public class ContatoDAO extends SQLiteOpenHelper {
         String[] params = {String.valueOf(contato.getId())};
         db.delete("tbl_contato", "id = ?", params);
     }
+
+    public void atualizar(Contato contato) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues dados = getDados(contato);
+
+        String[] params = {String.valueOf(contato.getId())};
+        db.update("tbl_contato", dados, "id = ?", params);
+    }
+
+    public ContentValues getDados(Contato contato){
+        ContentValues dados = new ContentValues();
+        dados.put("nome", contato.getNome());
+        dados.put("endereco", contato.getEndereco());
+        dados.put("email", contato.getEmail());
+        dados.put("linkedin", contato.getLinkedin());
+        dados.put("telefone", contato.getTelefone());
+        dados.put("obs", contato.getTelefone());
+
+        return dados;
+    }
 }
+
+
+
+
+
