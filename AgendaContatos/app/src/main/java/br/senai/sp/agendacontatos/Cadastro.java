@@ -1,6 +1,7 @@
 package br.senai.sp.agendacontatos;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -44,12 +45,12 @@ public class Cadastro extends AppCompatActivity {
             case R.id.btn_salvar:
                 ContatoDAO dao = new ContatoDAO(this);
                 Contato contato = helper.getContato();
-                if(helper.verificaCampos()) {
-                    if(contato.getId() > 0){
+                if(helper.verificaCamposVazios()) {
+                    if (contato.getId() > 0) {
                         dao.atualizar(contato);
                         Toast.makeText(this, "Contato atualizado com sucesso!", Toast.LENGTH_LONG).show();
                         finish();
-                    }else {
+                    } else {
                         dao.salvar(contato);
                         Toast.makeText(this, "Contato salvo com sucesso!", Toast.LENGTH_LONG).show();
                         finish();
