@@ -16,7 +16,7 @@ public class ValidaCaracteres{
     }
 
     public static boolean isValidEndereco(String txtEndereco){
-        String ENDERECO_PATTERN = "[a-zA-Z 0-9-.,]+";
+        String ENDERECO_PATTERN = "[à-úÀ-Úa-zA-Z 0-9-.,]+";
         Pattern patternENDERECO = Pattern.compile(ENDERECO_PATTERN);
         Matcher matcherENDERECO = patternENDERECO.matcher(txtEndereco);
         if(matcherENDERECO.matches()){
