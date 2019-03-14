@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class ValidaCaracteres{
 
     public static boolean isValidName(String txtNome){
-        String NAME_PATTERN = "[a-zA-Z ]+";
+        String NAME_PATTERN = "[à-úÀ-Úa-zA-Z ]+";
         Pattern patternNAME = Pattern.compile(NAME_PATTERN);
         Matcher matcherNAME = patternNAME.matcher(txtNome);
         if(matcherNAME.matches()){

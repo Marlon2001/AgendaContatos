@@ -20,10 +20,6 @@ public class Cadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //Mostrar o botão de voltar
-        getSupportActionBar().setHomeButtonEnabled(true);      //Ativar o botão
-        getSupportActionBar().setTitle("Agenda de Contatos");
-
         helper = new CadastroContatoHelper(this);
 
         Intent intent = getIntent();
@@ -63,11 +59,6 @@ public class Cadastro extends AppCompatActivity {
             case R.id.btn_cancelar:
                 Toast.makeText(this, "Operação cancelada!", Toast.LENGTH_LONG).show();
                 finish();
-                break;
-            case android.R.id.home:
-                Intent intent = new Intent(Cadastro.this, MainActivity.class);
-                startActivity(intent);
-                finishAffinity();
                 break;
         }
         return super.onOptionsItemSelected(item);
