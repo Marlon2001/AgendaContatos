@@ -2,6 +2,7 @@ package br.senai.sp.agendacontatos;
 
 import android.support.design.widget.TextInputLayout;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,6 +22,7 @@ public class CadastroContatoHelper {
     private EditText txtTelefone;
     private EditText txtLinkedin;
     private EditText txtObs;
+    private ImageButton btnFoto;
     private Contato contato;
 
     public CadastroContatoHelper(Cadastro activity){
@@ -36,6 +38,8 @@ public class CadastroContatoHelper {
         txtTelefone = activity.findViewById(R.id.txt_telefone);
         txtLinkedin = activity.findViewById(R.id.txt_linkedin);
         txtObs = activity.findViewById(R.id.txt_obs);
+        btnFoto = activity.findViewById(R.id.bt_add_foto);
+
         contato = new Contato();
     }
 

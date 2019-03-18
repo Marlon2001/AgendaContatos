@@ -14,10 +14,10 @@
         android:orientation="horizontal">
 
 
-        <ImageButton
+        <ImageView
             android:id="@+id/bt_add_foto"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="8dp"
             android:src="@drawable/ic_add_foto"/>
@@ -27,9 +27,9 @@
             android:layout_height="match_parent"
             android:text="Novo Contato"
             android:textColor="@color/colorPrimary"
-            android:paddingLeft="16dp"
+            android:paddingLeft="8dp"
             android:textSize="24dp"
-            android:paddingTop="16dp"
+            android:paddingTop="8dp"
             android:textStyle="bold"/>
     </LinearLayout>
 
