@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/img_contatos"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_contato"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:paddingTop="4dp"
+        android:paddingLeft="2dp">
+
+        <TextView
+            android:id="@+id/txt_nome_contato"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:text="Charles Chaplin"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:lines="1"/>
+
+        <LinearLayout
+            android:id="@+id/btn_telefone"
+            android:layout_width="184dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/txt_nome_contato">
+
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_call"/>
+
+            <TextView
+                android:id="@+id/txt_telefone"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="(11) 5423-5312"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ic_edit" />
+</LinearLayout>
