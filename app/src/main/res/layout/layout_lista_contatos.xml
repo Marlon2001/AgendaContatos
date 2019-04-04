@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="4dp">
 
     <ImageView
@@ -33,11 +33,12 @@
 
         <LinearLayout
             android:id="@+id/btn_telefone"
-            android:layout_width="184dp"
-            android:layout_height="32dp"
+            android:layout_width="140dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
             android:layout_below="@id/txt_nome_contato">
 
-            <Button
+            <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@drawable/ic_call"/>
@@ -47,17 +48,27 @@
                 android:layout_width="124dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
                 android:ellipsize="end"
+                android:textColor="@color/colorBlue"
                 android:lines="1"
                 android:text="(11) 5423-5312"/>
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/txt_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="999"/>
         </LinearLayout>
     </LinearLayout>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_edit"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/ic_edit" />
+
 </LinearLayout>

@@ -41,17 +41,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        listaContato.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Contato contato = (Contato) listaContato.getItemAtPosition(position);
-                Intent abrirCadastro = new Intent(MainActivity.this, Cadastro.class);
-
-                abrirCadastro.putExtra("contato", contato);
-                startActivity(abrirCadastro);
-            }
-        });
-
         registerForContextMenu(listaContato);
     }
 
